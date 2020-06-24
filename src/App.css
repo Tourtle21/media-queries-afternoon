@@ -1,0 +1,212 @@
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+
+.header {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: rgb(206, 206, 206);
+  transition: 0.5s;
+  z-index: 1;
+}
+#gray-scale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url('./background.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#built {
+  position: relative;
+  top: 100vh;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url('./background.jpg');
+}
+#name {
+  margin: 0;
+  color: white;
+  letter-spacing: 10px;
+  font-size: 100px;
+  opacity: 0.6;
+}
+.text {
+  color: rgb(168, 168, 168);
+  font-size: 21px;
+  width: 450px;
+  text-align: center;
+}
+#logo {
+  width: 40%;
+  margin-right: 100px;
+  cursor: pointer;
+}
+.head-nav {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+.head-nav > span {
+  cursor: pointer;
+}
+.head-nav > span:hover {
+  color: rgb(233, 233, 233);
+}
+.container {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.dropdown {
+  display: none;
+}
+.dropdown-item {
+  display: block;
+  position: relative;
+  right: calc(-15% + 29px);
+  /* margin-bottom:20px; */
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+.dropdown-item:hover {
+  color: rgb(39, 39, 39);
+}
+.dropdown-menu{
+  display: none;
+}
+.hi {
+  z-index:1;
+}
+.button {
+  padding: 20px 35px;
+  color: white;
+  background-color: rgb(0, 114, 85);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 1px black;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  outline:none;
+}
+.button:hover {
+  background-color:rgb(0, 95, 71);
+}
+.hamberger {
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  line-height: 4px;
+  margin-left: 5px;
+}
+@keyframes grow {
+  from {
+    height:0px;
+  }
+  to {
+    height: 115px;
+  }
+}
+@keyframes shrink {
+  from {
+    height:115px;
+  }
+  to {
+    height: 0px;
+  }
+}
+.hamberger span{
+  position: relative;
+  top: -3px;
+}
+@media(max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media(max-width: 992px) {
+  .header {
+    height: 80px;
+    opacity: 1;
+    background-color: white;
+    color: black;
+  }
+  .head-nav {
+    display: none;
+  }
+  .container {
+   width: 100%;
+  }
+  .dropdown {
+    display: flex;
+    border: 1px solid rgb(0, 130, 0);
+    color: rgb(0, 130, 0);
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    cursor: pointer;
+  }
+  .dropdown-menu {
+    height:1px;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    color: grey;
+    display:flex;
+    flex-direction: column;
+    animation-name: grow;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
+  #name {
+    font-size: 60px;
+    letter-spacing: 6px;
+  }
+  .text {
+    font-size: 17px;
+    width: 300px;
+  }
+}
+
+@media(max-width: 768px) {
+  #logo {
+    margin-right: 0px;
+  }
+  #name {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
